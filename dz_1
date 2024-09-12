@@ -1,0 +1,14 @@
+symma = int(input('Введите текущий баланс карты'))
+while symma == 0 or vopros1 == 'нет':
+    vopros1 = input('Хотите сделать покупку (да/нет)?')
+    vopros1.lower()
+    if vopros1 == 'да':
+        symma1 = int(input('Введите цену'))
+        if symma1 <= symma:
+                print('Сумма',symma1 ,'руб. списана со счёта.')
+                symma = symma - symma1
+        else:
+            print('Недостаточно средств!')
+    if vopros1 == 'нет':
+        print('Доступная сумма:', symma ,'руб.')\
+        break
